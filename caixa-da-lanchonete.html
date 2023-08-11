@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Caixa da Lanchonete</title>
+</head>
+<body>
+    <h1>Teste Caixa da Lanchonete</h1>
+    <script src="caixa-da-lanchonete.js"></script>
+    <script>
+        // Importar a classe CaixaDaLanchonete do módulo
+        import { CaixaDaLanchonete } from './caminho-para-caixa-da-lanchonete.js';
+
+        // Criar uma instância da classe
+        const caixa = new CaixaDaLanchonete();
+
+        // Testar o método calcularValorDaCompra
+        const metodoDePagamento = "dinheiro";
+        const itens = ["cafe", "chantily", "sanduiche"];
+        const valorTotal = caixa.calcularValorDaCompra(metodoDePagamento, itens);
+
+        // Exibir o valor total na página
+        const resultadoElement = document.createElement("p");
+        resultadoElement.textContent = `Valor total da compra: R$ ${valorTotal}`;
+        document.body.appendChild(resultadoElement);
+    </script>
+</body>
+</html>
